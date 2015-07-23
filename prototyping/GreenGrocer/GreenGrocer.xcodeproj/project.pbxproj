@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		2288EB4D1B61071600D4717D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB4C1B61071600D4717D /* AppDelegate.swift */; };
-		2288EB4F1B61071600D4717D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB4E1B61071600D4717D /* FirstViewController.swift */; };
-		2288EB511B61071600D4717D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB501B61071600D4717D /* SecondViewController.swift */; };
 		2288EB541B61071600D4717D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2288EB521B61071600D4717D /* Main.storyboard */; };
 		2288EB561B61071600D4717D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2288EB551B61071600D4717D /* Assets.xcassets */; };
 		2288EB591B61071600D4717D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2288EB571B61071600D4717D /* LaunchScreen.storyboard */; };
+		2288EB621B611C1700D4717D /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB611B611C1700D4717D /* ProductTableViewController.swift */; };
+		2288EB641B611C3200D4717D /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB631B611C3200D4717D /* ShoppingListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2288EB491B61071600D4717D /* GreenGrocer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenGrocer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2288EB4C1B61071600D4717D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2288EB4E1B61071600D4717D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		2288EB501B61071600D4717D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2288EB531B61071600D4717D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2288EB551B61071600D4717D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2288EB581B61071600D4717D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2288EB5A1B61071600D4717D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2288EB611B611C1700D4717D /* ProductTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
+		2288EB631B611C3200D4717D /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,23 @@
 		2288EB4B1B61071600D4717D /* GreenGrocer */ = {
 			isa = PBXGroup;
 			children = (
+				2288EB601B611BF300D4717D /* Controllers */,
 				2288EB4C1B61071600D4717D /* AppDelegate.swift */,
-				2288EB4E1B61071600D4717D /* FirstViewController.swift */,
-				2288EB501B61071600D4717D /* SecondViewController.swift */,
 				2288EB521B61071600D4717D /* Main.storyboard */,
 				2288EB551B61071600D4717D /* Assets.xcassets */,
 				2288EB571B61071600D4717D /* LaunchScreen.storyboard */,
 				2288EB5A1B61071600D4717D /* Info.plist */,
 			);
 			path = GreenGrocer;
+			sourceTree = "<group>";
+		};
+		2288EB601B611BF300D4717D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2288EB611B611C1700D4717D /* ProductTableViewController.swift */,
+				2288EB631B611C3200D4717D /* ShoppingListTableViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2288EB511B61071600D4717D /* SecondViewController.swift in Sources */,
+				2288EB621B611C1700D4717D /* ProductTableViewController.swift in Sources */,
 				2288EB4D1B61071600D4717D /* AppDelegate.swift in Sources */,
-				2288EB4F1B61071600D4717D /* FirstViewController.swift in Sources */,
+				2288EB641B611C3200D4717D /* ShoppingListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +297,7 @@
 				2288EB5F1B61071600D4717D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
