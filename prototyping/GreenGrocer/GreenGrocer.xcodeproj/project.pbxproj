@@ -13,6 +13,11 @@
 		2288EB591B61071600D4717D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2288EB571B61071600D4717D /* LaunchScreen.storyboard */; };
 		2288EB621B611C1700D4717D /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB611B611C1700D4717D /* ProductTableViewController.swift */; };
 		2288EB641B611C3200D4717D /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB631B611C3200D4717D /* ShoppingListTableViewController.swift */; };
+		2288EB671B611FEF00D4717D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB661B611FEF00D4717D /* Product.swift */; };
+		2288EB691B6120AD00D4717D /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB681B6120AD00D4717D /* ShoppingList.swift */; };
+		2288EB6B1B612C2400D4717D /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB6A1B612C2400D4717D /* DataStore.swift */; };
+		2288EB6D1B61383C00D4717D /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB6C1B61383C00D4717D /* DataModel.swift */; };
+		2288EB6F1B614F0E00D4717D /* GreenGrocerSeed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2288EB6E1B614F0E00D4717D /* GreenGrocerSeed.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		2288EB5A1B61071600D4717D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2288EB611B611C1700D4717D /* ProductTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 		2288EB631B611C3200D4717D /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
+		2288EB661B611FEF00D4717D /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		2288EB681B6120AD00D4717D /* ShoppingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		2288EB6A1B612C2400D4717D /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		2288EB6C1B61383C00D4717D /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		2288EB6E1B614F0E00D4717D /* GreenGrocerSeed.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GreenGrocerSeed.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 		2288EB4B1B61071600D4717D /* GreenGrocer */ = {
 			isa = PBXGroup;
 			children = (
+				2288EB651B611EA500D4717D /* Data Layer */,
 				2288EB601B611BF300D4717D /* Controllers */,
 				2288EB4C1B61071600D4717D /* AppDelegate.swift */,
 				2288EB521B61071600D4717D /* Main.storyboard */,
@@ -73,6 +84,18 @@
 				2288EB631B611C3200D4717D /* ShoppingListTableViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2288EB651B611EA500D4717D /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2288EB6C1B61383C00D4717D /* DataModel.swift */,
+				2288EB661B611FEF00D4717D /* Product.swift */,
+				2288EB681B6120AD00D4717D /* ShoppingList.swift */,
+				2288EB6A1B612C2400D4717D /* DataStore.swift */,
+				2288EB6E1B614F0E00D4717D /* GreenGrocerSeed.plist */,
+			);
+			name = "Data Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +158,7 @@
 				2288EB591B61071600D4717D /* LaunchScreen.storyboard in Resources */,
 				2288EB561B61071600D4717D /* Assets.xcassets in Resources */,
 				2288EB541B61071600D4717D /* Main.storyboard in Resources */,
+				2288EB6F1B614F0E00D4717D /* GreenGrocerSeed.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2288EB6D1B61383C00D4717D /* DataModel.swift in Sources */,
 				2288EB621B611C1700D4717D /* ProductTableViewController.swift in Sources */,
+				2288EB6B1B612C2400D4717D /* DataStore.swift in Sources */,
+				2288EB671B611FEF00D4717D /* Product.swift in Sources */,
+				2288EB691B6120AD00D4717D /* ShoppingList.swift in Sources */,
 				2288EB4D1B61071600D4717D /* AppDelegate.swift in Sources */,
 				2288EB641B611C3200D4717D /* ShoppingListTableViewController.swift in Sources */,
 			);
