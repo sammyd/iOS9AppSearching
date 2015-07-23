@@ -14,7 +14,7 @@
 			<key>details</key>
 			<string>An apple a day keeps the doctor away.</string>
 			<key>photoName</key>
-			<string>apple</string>
+			<string>apples</string>
 		</dict>
 		<dict>
 			<key>id</key>
@@ -26,7 +26,7 @@
 			<key>details</key>
 			<string>Juicy and firm - just as you like it</string>
 			<key>photoName</key>
-			<string>pear</string>
+			<string>pears</string>
 		</dict>
 		<dict>
 			<key>id</key>
@@ -38,7 +38,7 @@
 			<key>details</key>
 			<string>What an excellent source of potassium!</string>
 			<key>photoName</key>
-			<string>banana</string>
+			<string>bananas</string>
 		</dict>
 		<dict>
 			<key>id</key>

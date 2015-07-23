@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="TabBarViewController" customModule="GreenGrocer" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -27,19 +27,43 @@
         <scene sceneID="Bsu-lD-z1v">
             <objects>
                 <tableViewController id="4OM-co-sp8" customClass="ProductTableViewController" customModule="GreenGrocer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4gK-zU-Psi">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="164" sectionHeaderHeight="22" sectionFooterHeight="22" id="4gK-zU-Psi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Fz9-NS-BL1">
-                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="164" id="Fz9-NS-BL1" customClass="ProductTableViewCell" customModule="GreenGrocer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="600" height="164"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fz9-NS-BL1" id="poc-Kl-dC7">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="163.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Pd-KT-sl0">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="163.5"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pears_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="w5P-OF-MDw">
+                                                    <rect key="frame" x="0.0" y="32" width="100" height="100"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="ProductName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-By-NOt">
+                                                    <rect key="frame" x="105" y="64" width="462" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="9Pd-KT-sl0" secondAttribute="bottom" id="UDN-pO-9Cq"/>
+                                        <constraint firstItem="9Pd-KT-sl0" firstAttribute="leading" secondItem="poc-Kl-dC7" secondAttribute="leading" id="brf-bQ-gDQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="9Pd-KT-sl0" secondAttribute="trailing" id="hPC-Dl-h49"/>
+                                        <constraint firstItem="9Pd-KT-sl0" firstAttribute="top" secondItem="poc-Kl-dC7" secondAttribute="top" id="xLn-up-Awb"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="nameLabel" destination="Vj9-By-NOt" id="Zhe-P7-tQ1"/>
+                                    <outlet property="productImageView" destination="w5P-OF-MDw" id="tTI-KE-tGP"/>
                                     <segue destination="UuY-KM-3Oq" kind="show" id="wM3-7q-zuo"/>
                                 </connections>
                             </tableViewCell>
@@ -126,7 +150,7 @@
         <!--Shopping Lists-->
         <scene sceneID="SQL-uI-sdc">
             <objects>
-                <navigationController id="ULH-uX-xxT" sceneMemberID="viewController">
+                <navigationController id="ULH-uX-xxT" customClass="NavigationViewController" customModule="GreenGrocer" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Shopping Lists" image="second" id="H52-tB-Aso"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IIj-2U-vvF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -143,7 +167,7 @@
         <!--Products-->
         <scene sceneID="SCW-ta-Va0">
             <objects>
-                <navigationController id="x4h-nZ-vHz" sceneMemberID="viewController">
+                <navigationController id="x4h-nZ-vHz" customClass="NavigationViewController" customModule="GreenGrocer" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Products" image="first" id="egI-pS-ugL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pOa-Fj-t4O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -160,6 +184,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="pears_thumb" width="100" height="100"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

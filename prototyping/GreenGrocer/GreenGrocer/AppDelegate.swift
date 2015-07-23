@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     dataStore = loadDataStore("GreenGrocerSeed")
     
+    var dso = window?.rootViewController as? DataStoreOwner
+    dso?.dataStore = dataStore
+    
     return true
   }
 }
