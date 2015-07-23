@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar View Controller-->
@@ -79,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="1361" y="-450"/>
         </scene>
-        <!--View Controller-->
+        <!--Product View Controller-->
         <scene sceneID="6w0-HD-tdX">
             <objects>
-                <viewController id="UuY-KM-3Oq" sceneMemberID="viewController">
+                <viewController id="UuY-KM-3Oq" customClass="ProductViewController" customModule="GreenGrocer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z5x-pv-Ur8"/>
                         <viewControllerLayoutGuide type="bottom" id="AzK-vw-g6B"/>
@@ -90,8 +91,72 @@
                     <view key="view" contentMode="scaleToFill" id="enp-j5-N92">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pears" translatesAutoresizingMaskIntoConstraints="NO" id="uCc-EJ-DAS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="06z-wo-Ukr">
+                                <rect key="frame" x="0.0" y="423" width="600" height="128"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kqH-dU-ETK">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bH2-Ff-yql">
+                                            <rect key="frame" x="8" y="8" width="584" height="119.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vog-cW-XlM">
+                                                    <rect key="frame" x="0.0" y="12" width="468.5" height="96"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="NameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk1-Z3-FGa">
+                                                            <rect key="frame" x="0.0" y="0.0" width="468.5" height="60"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="DetailsLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AF-gf-e8i" customClass="MultilineLabelThatWorks" customModule="GreenGrocer" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="60" width="468.5" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzN-cb-sGM">
+                                                    <rect key="frame" x="468.5" y="0.0" width="115.5" height="119.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="100"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bH2-Ff-yql" secondAttribute="trailing" id="1op-P4-fHS"/>
+                                        <constraint firstItem="bH2-Ff-yql" firstAttribute="top" secondItem="kqH-dU-ETK" secondAttribute="topMargin" id="UB8-kG-SPb"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bH2-Ff-yql" secondAttribute="bottom" id="Ygg-FB-Zg2"/>
+                                        <constraint firstItem="bH2-Ff-yql" firstAttribute="leading" secondItem="kqH-dU-ETK" secondAttribute="leadingMargin" id="eEM-8h-1ae"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uCc-EJ-DAS" firstAttribute="leading" secondItem="enp-j5-N92" secondAttribute="leading" id="IQz-PC-eMV"/>
+                            <constraint firstAttribute="bottom" secondItem="uCc-EJ-DAS" secondAttribute="bottom" id="Tcv-o9-FAX"/>
+                            <constraint firstItem="AzK-vw-g6B" firstAttribute="top" secondItem="06z-wo-Ukr" secondAttribute="bottom" id="fwE-ZP-VxJ"/>
+                            <constraint firstAttribute="trailing" secondItem="06z-wo-Ukr" secondAttribute="trailing" id="gL5-yY-Gfm"/>
+                            <constraint firstAttribute="trailing" secondItem="uCc-EJ-DAS" secondAttribute="trailing" id="gzg-mi-WGJ"/>
+                            <constraint firstItem="uCc-EJ-DAS" firstAttribute="top" secondItem="enp-j5-N92" secondAttribute="top" id="tsU-nQ-Evh"/>
+                            <constraint firstItem="06z-wo-Ukr" firstAttribute="leading" secondItem="enp-j5-N92" secondAttribute="leading" id="vrW-Kk-gSc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailsLabel" destination="9AF-gf-e8i" id="74V-r7-Xff"/>
+                        <outlet property="nameLabel" destination="Dk1-Z3-FGa" id="Old-jV-i5Y"/>
+                        <outlet property="priceLabel" destination="xzN-cb-sGM" id="UIO-3D-Km7"/>
+                        <outlet property="productImageView" destination="uCc-EJ-DAS" id="ysf-c7-Qt7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqN-Wh-QIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,6 +249,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="pears" width="640" height="426"/>
         <image name="pears_thumb" width="100" height="100"/>
         <image name="second" width="30" height="30"/>
     </resources>
