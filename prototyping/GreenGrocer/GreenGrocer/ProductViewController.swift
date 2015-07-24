@@ -28,7 +28,6 @@ class ProductViewController: UIViewController {
     // Do any additional setup after loading the view.
     userActivity = prepareUserActivity()
     updateViewForProduct()
-    userActivity?.needsSave = true
   }
 
   private func updateViewForProduct() {
@@ -47,7 +46,8 @@ extension ProductViewController {
     if let product = product {
       activity.contentAttributeSet = searchAttributeSetForProduct(product)
       activity.title = product.name
-      activity.addUserInfoEntriesFromDictionary(["productName" : product.name, "productType" : "fruit"])
+      activity.addUserInfoEntriesFromDictionary(["id" : product.id.UUIDString])
+      activity.keywords = Set([product.name, "fruit"])
     }
   }
   
@@ -61,10 +61,10 @@ extension ProductViewController {
   
   private func searchAttributeSetForProduct(product: Product) -> CSSearchableItemAttributeSet {
     let attributeSet = CSSearchableItemAttributeSet()
-    attributeSet.relatedUniqueIdentifier = product.id.UUIDString
+    attributeSet.contentDescription = product.details
     attributeSet.title = product.name
     attributeSet.displayName = product.name
-    attributeSet.keywords = ["fruit", "shopping", "greengrocer"]
+    attributeSet.keywords = [product.name, "fruit", "shopping", "greengrocer"]
     if let thumbnail = UIImage(named: "\(product.photoName)_thumb") {
       attributeSet.thumbnailData = UIImageJPEGRepresentation(thumbnail, 0.7)
     }
