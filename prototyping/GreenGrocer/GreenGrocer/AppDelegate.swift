@@ -8,6 +8,9 @@
 
 import UIKit
 
+let productActivityName = "com.razeware.GreenGrocer.product"
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
