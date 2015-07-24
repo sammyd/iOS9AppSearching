@@ -62,3 +62,17 @@ extension Product : Serializable {
     ]
   }
 }
+
+extension Product : Equatable {
+  // Free function below
+}
+
+func ==(lhs: Product, rhs: Product) -> Bool {
+  return lhs.id.isEqual(rhs.id)
+}
+
+extension Product : Hashable {
+  var hashValue : Int {
+    return id.UUIDString.hashValue
+  }
+}

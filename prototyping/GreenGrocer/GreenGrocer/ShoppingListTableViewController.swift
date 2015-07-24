@@ -48,7 +48,16 @@ class ShoppingListTableViewController: UITableViewController, DataStoreOwner {
       let selectedRowIndex = tableView.indexPathForSelectedRow
       destVC.shoppingList = dataStore?.shoppingLists[selectedRowIndex?.row ?? 0]
       destVC.dataStore = dataStore
+    } else if let destVC = segue.destinationViewController as? CreateShoppingListViewController {
+      destVC.dataStore = dataStore
     }
   }
   
+}
+
+
+extension ShoppingListTableViewController {
+  @IBAction func unwindToShoppingListTableVC(unwindSegue: UIStoryboardSegue) {
+    tableView.reloadData()
+  }
 }

@@ -93,3 +93,11 @@ extension NSURL {
   }
 }
 
+
+// MARK:- Adding new content
+extension DataStore {
+  func addShoppingList(shoppingList: ShoppingList) {
+    shoppingLists.append(shoppingList)
+    save()
+  }
+}

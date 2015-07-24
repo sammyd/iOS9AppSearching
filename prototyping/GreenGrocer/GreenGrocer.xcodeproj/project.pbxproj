@@ -27,6 +27,8 @@
 		2288EB7E1B61887F00D4717D /* MultilineLabelThatWorks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB7D1B61887F00D4717D /* MultilineLabelThatWorks.swift */; };
 		2288EB801B62186D00D4717D /* ShoppingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB7F1B62186D00D4717D /* ShoppingListTableViewCell.swift */; };
 		2288EB821B62260E00D4717D /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB811B62260E00D4717D /* ShoppingListViewController.swift */; };
+		22F2E3C31B623DE500E7753F /* CreateShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2E3C21B623DE500E7753F /* CreateShoppingListViewController.swift */; };
+		22F2E3C51B6246BA00E7753F /* SelectableProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2E3C41B6246BA00E7753F /* SelectableProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		2288EB7D1B61887F00D4717D /* MultilineLabelThatWorks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilineLabelThatWorks.swift; sourceTree = "<group>"; };
 		2288EB7F1B62186D00D4717D /* ShoppingListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewCell.swift; sourceTree = "<group>"; };
 		2288EB811B62260E00D4717D /* ShoppingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		22F2E3C21B623DE500E7753F /* CreateShoppingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateShoppingListViewController.swift; sourceTree = "<group>"; };
+		22F2E3C41B6246BA00E7753F /* SelectableProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				2288EB631B611C3200D4717D /* ShoppingListTableViewController.swift */,
 				2288EB7B1B61831D00D4717D /* ProductViewController.swift */,
 				2288EB811B62260E00D4717D /* ShoppingListViewController.swift */,
+				22F2E3C21B623DE500E7753F /* CreateShoppingListViewController.swift */,
 				2288EB721B61585200D4717D /* DataStoreUtils.swift */,
 			);
 			name = Controllers;
@@ -129,6 +134,7 @@
 				2288EB751B61704A00D4717D /* ProductTableViewCell.swift */,
 				2288EB7D1B61887F00D4717D /* MultilineLabelThatWorks.swift */,
 				2288EB7F1B62186D00D4717D /* ShoppingListTableViewCell.swift */,
+				22F2E3C41B6246BA00E7753F /* SelectableProductTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -205,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F2E3C51B6246BA00E7753F /* SelectableProductTableViewCell.swift in Sources */,
 				2288EB711B6157EC00D4717D /* TabBarViewController.swift in Sources */,
 				2288EB7A1B617FF000D4717D /* NavigationViewController.swift in Sources */,
 				2288EB821B62260E00D4717D /* ShoppingListViewController.swift in Sources */,
@@ -213,6 +220,7 @@
 				2288EB6D1B61383C00D4717D /* DataModel.swift in Sources */,
 				2288EB621B611C1700D4717D /* ProductTableViewController.swift in Sources */,
 				2288EB6B1B612C2400D4717D /* DataStore.swift in Sources */,
+				22F2E3C31B623DE500E7753F /* CreateShoppingListViewController.swift in Sources */,
 				2288EB7C1B61831D00D4717D /* ProductViewController.swift in Sources */,
 				2288EB671B611FEF00D4717D /* Product.swift in Sources */,
 				2288EB691B6120AD00D4717D /* ShoppingList.swift in Sources */,
