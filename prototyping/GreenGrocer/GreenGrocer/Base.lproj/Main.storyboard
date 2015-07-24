@@ -93,13 +93,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pears" translatesAutoresizingMaskIntoConstraints="NO" id="uCc-EJ-DAS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pears" translatesAutoresizingMaskIntoConstraints="NO" id="uCc-EJ-DAS">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="06z-wo-Ukr">
-                                <rect key="frame" x="0.0" y="415.5" width="600" height="135.5"/>
+                                <rect key="frame" x="0.0" y="415.5" width="600" height="184.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kqH-dU-ETK">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="135.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="184.5"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bH2-Ff-yql">
@@ -134,7 +134,7 @@
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="bH2-Ff-yql" secondAttribute="trailing" id="1op-P4-fHS"/>
                                         <constraint firstItem="bH2-Ff-yql" firstAttribute="top" secondItem="kqH-dU-ETK" secondAttribute="topMargin" id="UB8-kG-SPb"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="bH2-Ff-yql" secondAttribute="bottom" id="Ygg-FB-Zg2"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bH2-Ff-yql" secondAttribute="bottom" constant="49" id="Ygg-FB-Zg2"/>
                                         <constraint firstItem="bH2-Ff-yql" firstAttribute="leading" secondItem="kqH-dU-ETK" secondAttribute="leadingMargin" id="eEM-8h-1ae"/>
                                     </constraints>
                                 </view>
@@ -145,7 +145,7 @@
                         <constraints>
                             <constraint firstItem="uCc-EJ-DAS" firstAttribute="leading" secondItem="enp-j5-N92" secondAttribute="leading" id="IQz-PC-eMV"/>
                             <constraint firstAttribute="bottom" secondItem="uCc-EJ-DAS" secondAttribute="bottom" id="Tcv-o9-FAX"/>
-                            <constraint firstItem="AzK-vw-g6B" firstAttribute="top" secondItem="06z-wo-Ukr" secondAttribute="bottom" id="fwE-ZP-VxJ"/>
+                            <constraint firstAttribute="bottom" secondItem="06z-wo-Ukr" secondAttribute="bottom" id="YZO-zE-69a"/>
                             <constraint firstAttribute="trailing" secondItem="06z-wo-Ukr" secondAttribute="trailing" id="gL5-yY-Gfm"/>
                             <constraint firstAttribute="trailing" secondItem="uCc-EJ-DAS" secondAttribute="trailing" id="gzg-mi-WGJ"/>
                             <constraint firstItem="uCc-EJ-DAS" firstAttribute="top" secondItem="enp-j5-N92" secondAttribute="top" id="tsU-nQ-Evh"/>
@@ -175,7 +175,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fruit" translatesAutoresizingMaskIntoConstraints="NO" id="eRM-yC-Yh0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fruit" translatesAutoresizingMaskIntoConstraints="NO" id="eRM-yC-Yh0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqR-ab-F2b">
