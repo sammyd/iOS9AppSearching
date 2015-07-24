@@ -40,14 +40,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="163.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Pd-KT-sl0">
+                                        <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Pd-KT-sl0">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="163.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pears_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="w5P-OF-MDw">
                                                     <rect key="frame" x="0.0" y="32" width="100" height="100"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="ProductName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-By-NOt">
-                                                    <rect key="frame" x="105" y="64" width="462" height="36"/>
+                                                    <rect key="frame" x="110" y="64" width="457" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -162,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="2078" y="-450"/>
         </scene>
-        <!--View Controller-->
+        <!--Shopping List View Controller-->
         <scene sceneID="98n-Xb-F6e">
             <objects>
-                <viewController id="Gs9-sf-GlN" sceneMemberID="viewController">
+                <viewController id="Gs9-sf-GlN" customClass="ShoppingListViewController" customModule="GreenGrocer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x6J-uM-4my"/>
                         <viewControllerLayoutGuide type="bottom" id="YSR-qm-Xyx"/>
@@ -173,8 +173,129 @@
                     <view key="view" contentMode="scaleToFill" id="iVd-cc-Mbb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fruit" translatesAutoresizingMaskIntoConstraints="NO" id="eRM-yC-Yh0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqR-ab-F2b">
+                                <rect key="frame" x="0.0" y="114" width="600" height="486"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hel-8h-acA">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="486"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="sUR-82-6R0">
+                                            <rect key="frame" x="8" y="8" width="584" height="90"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dU2-5J-Msf">
+                                                    <rect key="frame" x="0.0" y="17" width="468" height="56.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="NameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcY-xH-PeA" customClass="MultilineLabelThatWorks" customModule="GreenGrocer" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="144.5" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=compact" fixedFrame="YES">
+                                                                <rect key="frame" x="0.0" y="0.0" width="383.5" height="48"/>
+                                                            </variation>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="DateLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ld6-wp-24W" customClass="MultilineLabelThatWorks" customModule="GreenGrocer" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="36" width="77" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=compact" fixedFrame="YES">
+                                                                <rect key="frame" x="383.5" y="9" width="106.5" height="30"/>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <variation key="heightClass=compact" alignment="center" axis="horizontal"/>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woS-OY-JXk">
+                                                    <rect key="frame" x="470" y="0.0" width="114" height="90"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="75"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=compact" fixedFrame="YES">
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
+                                                        <rect key="frame" x="492" y="0.0" width="92" height="72"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="142" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Acs-En-rtW">
+                                            <rect key="frame" x="0.0" y="101.5" width="600" height="384"/>
+                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="separatorColor" red="0.73688759079999999" green="0.33276109510000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <prototypes>
+                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" id="WNp-QU-dH8" customClass="ProductTableViewCell" customModule="GreenGrocer" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="22" width="600" height="142"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WNp-QU-dH8" id="1kX-R5-5NB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="142"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ht5-7s-uzt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="600" height="141.5"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pears_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Oa3-94-OCB">
+                                                                        <rect key="frame" x="0.0" y="21" width="100" height="100"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="ProductName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1g-Mx-IVc">
+                                                                        <rect key="frame" x="110" y="53" width="490" height="36"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="Ht5-7s-uzt" firstAttribute="top" secondItem="1kX-R5-5NB" secondAttribute="top" id="UOh-EJ-Xmd"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Ht5-7s-uzt" secondAttribute="trailing" id="X7R-Rh-igh"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Ht5-7s-uzt" secondAttribute="bottom" id="hpe-Cy-UEI"/>
+                                                            <constraint firstItem="Ht5-7s-uzt" firstAttribute="leading" secondItem="1kX-R5-5NB" secondAttribute="leading" id="iQ5-dc-QPh"/>
+                                                        </constraints>
+                                                    </tableViewCellContentView>
+                                                    <connections>
+                                                        <outlet property="nameLabel" destination="D1g-Mx-IVc" id="uCj-cd-3wC"/>
+                                                        <outlet property="productImageView" destination="Oa3-94-OCB" id="1ao-Vx-35b"/>
+                                                    </connections>
+                                                </tableViewCell>
+                                            </prototypes>
+                                        </tableView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="sUR-82-6R0" secondAttribute="trailing" id="7aq-Zz-UyR"/>
+                                        <constraint firstAttribute="trailing" secondItem="Acs-En-rtW" secondAttribute="trailing" id="DgA-If-wwT"/>
+                                        <constraint firstAttribute="bottom" secondItem="Acs-En-rtW" secondAttribute="bottom" id="GO8-vW-7TE"/>
+                                        <constraint firstItem="sUR-82-6R0" firstAttribute="leading" secondItem="hel-8h-acA" secondAttribute="leadingMargin" id="hzL-1N-AZC"/>
+                                        <constraint firstItem="sUR-82-6R0" firstAttribute="top" secondItem="hel-8h-acA" secondAttribute="topMargin" id="ijG-em-vNV"/>
+                                        <constraint firstItem="Acs-En-rtW" firstAttribute="top" secondItem="dU2-5J-Msf" secondAttribute="bottom" constant="20" id="l20-wd-I9v"/>
+                                        <constraint firstItem="Acs-En-rtW" firstAttribute="leading" secondItem="hel-8h-acA" secondAttribute="leading" id="vFH-Nc-In0"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jqR-ab-F2b" firstAttribute="top" secondItem="x6J-uM-4my" secondAttribute="bottom" constant="50" id="2qT-bG-1LY">
+                                <variation key="heightClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="jqR-ab-F2b" secondAttribute="trailing" id="5fh-Mc-mVt"/>
+                            <constraint firstItem="jqR-ab-F2b" firstAttribute="leading" secondItem="iVd-cc-Mbb" secondAttribute="leading" id="6Ae-by-RyF"/>
+                            <constraint firstAttribute="bottom" secondItem="jqR-ab-F2b" secondAttribute="bottom" id="VWK-yq-6za"/>
+                            <constraint firstAttribute="trailing" secondItem="eRM-yC-Yh0" secondAttribute="trailing" id="amE-f7-a5V"/>
+                            <constraint firstItem="eRM-yC-Yh0" firstAttribute="top" secondItem="iVd-cc-Mbb" secondAttribute="top" id="dIT-hv-dNx"/>
+                            <constraint firstItem="eRM-yC-Yh0" firstAttribute="leading" secondItem="iVd-cc-Mbb" secondAttribute="leading" id="tBj-oR-rOw"/>
+                            <constraint firstAttribute="bottom" secondItem="eRM-yC-Yh0" secondAttribute="bottom" id="uXs-mg-9h8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="ld6-wp-24W" id="dt5-9s-ZiY"/>
+                        <outlet property="nameLabel" destination="DcY-xH-PeA" id="VZq-EF-k9t"/>
+                        <outlet property="tableView" destination="Acs-En-rtW" id="HDH-u3-aKD"/>
+                        <outlet property="totalCostLabel" destination="woS-OY-JXk" id="CVC-eo-15T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SH2-5Q-oXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,19 +305,58 @@
         <scene sceneID="NW7-2T-zBY">
             <objects>
                 <tableViewController id="elr-Rg-ctp" customClass="ShoppingListTableViewController" customModule="GreenGrocer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SH7-kP-QR7">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="119" sectionHeaderHeight="22" sectionFooterHeight="22" id="SH7-kP-QR7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppingListCell" id="uZa-3S-Yiv">
-                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ShoppingListCell" rowHeight="119" id="uZa-3S-Yiv" customClass="ShoppingListTableViewCell" customModule="GreenGrocer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="600" height="119"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uZa-3S-Yiv" id="V9E-4x-ITR">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="118.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="JuJ-vu-NBK">
+                                            <rect key="frame" x="8" y="8" width="551" height="102.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="H06-zW-t39">
+                                                    <rect key="frame" x="0.0" y="23" width="417.5" height="56.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="NameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFq-2W-7PL" customClass="MultilineLabelThatWorks" customModule="GreenGrocer" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="144.5" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="DateLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxl-FI-k6O" customClass="MultilineLabelThatWorks" customModule="GreenGrocer" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="36" width="77" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ItemCount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnJ-b0-P1y">
+                                                    <rect key="frame" x="419.5" y="33.5" width="131.5" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JuJ-vu-NBK" firstAttribute="leading" secondItem="V9E-4x-ITR" secondAttribute="leadingMargin" id="5b7-Qb-KKI"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="JuJ-vu-NBK" secondAttribute="trailing" id="GAa-1r-ISk"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="JuJ-vu-NBK" secondAttribute="bottom" id="jdT-7c-0IL"/>
+                                        <constraint firstItem="JuJ-vu-NBK" firstAttribute="top" secondItem="V9E-4x-ITR" secondAttribute="topMargin" id="sdj-hr-dlM"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="dateLabel" destination="Nxl-FI-k6O" id="4k3-hl-TfR"/>
+                                    <outlet property="itemCountLabel" destination="KnJ-b0-P1y" id="jIJ-Af-Wud"/>
+                                    <outlet property="nameLabel" destination="fFq-2W-7PL" id="FPD-Du-QHo"/>
                                     <segue destination="Gs9-sf-GlN" kind="show" id="NEU-3o-RAY"/>
                                 </connections>
                             </tableViewCell>
@@ -249,6 +409,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="fruit" width="1520" height="836"/>
         <image name="pears" width="640" height="426"/>
         <image name="pears_thumb" width="100" height="100"/>
         <image name="second" width="30" height="30"/>

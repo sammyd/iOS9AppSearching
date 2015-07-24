@@ -16,8 +16,8 @@ class ProductTableViewCell: UITableViewCell {
   var product : Product? {
     didSet {
       if let product = product {
-        nameLabel.text = product.name
-        productImageView.image = UIImage(named: "\(product.photoName)_thumb")
+        nameLabel?.text = product.name
+        productImageView?.image = UIImage(named: "\(product.photoName)_thumb")
       }
     }
   }
