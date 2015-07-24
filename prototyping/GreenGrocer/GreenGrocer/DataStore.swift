@@ -94,10 +94,16 @@ extension NSURL {
 }
 
 
-// MARK:- Adding new content
+// MARK:- Managing shopping lists
 extension DataStore {
   func addShoppingList(shoppingList: ShoppingList) {
     shoppingLists.append(shoppingList)
     save()
+  }
+  
+  func removeShoppingList(shoppingList: ShoppingList) {
+    if let index = shoppingLists.indexOf(shoppingList) {
+      shoppingLists.removeAtIndex(index)
+    }
   }
 }

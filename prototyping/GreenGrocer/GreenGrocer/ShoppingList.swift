@@ -56,6 +56,15 @@ extension ShoppingList : Serializable {
   }
 }
 
+// Equatable
+extension ShoppingList : Equatable {
+  
+}
+
+func ==(lhs: ShoppingList, rhs: ShoppingList) -> Bool {
+  return lhs.id.isEqual(rhs.id)
+}
+
 private func mapProductIDListToProductList(productIDList: [String]) -> [Product]? {
   let products = productIDList.map(findProductForIDString).filter{ $0 != nil }.map{ $0! }
   if products.count == productIDList.count {

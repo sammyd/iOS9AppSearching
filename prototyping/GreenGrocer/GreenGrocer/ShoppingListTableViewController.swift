@@ -39,6 +39,20 @@ class ShoppingListTableViewController: UITableViewController, DataStoreOwner {
   
     return cell
   }
+  
+  // MARK: - Table view delegate
+  override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    return true
+  }
+  
+  override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    if editingStyle == .Delete {
+      if let shoppingList = dataStore?.shoppingLists[indexPath.row] {
+        dataStore?.removeShoppingList(shoppingList)
+        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+      }
+    }
+  }
 
   // MARK: - Navigation
   
