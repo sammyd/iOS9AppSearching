@@ -28,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 }
 
-
 extension AppDelegate {
   private func loadDataStore(seedPlistName: String) -> DataStore? {
     if DataStore.defaultDataStorePresentOnDisk {
@@ -44,3 +43,16 @@ extension AppDelegate {
   }
 }
 
+
+extension AppDelegate {
+  func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
+    if let rootVC = window?.rootViewController,
+      let restorable = rootVC as? RestorableActivity
+      where restorable.restorableActivities.contains(userActivity.activityType) {
+        restorationHandler([rootVC])
+        return true
+    } else {
+      return false
+    }
+  }
+}

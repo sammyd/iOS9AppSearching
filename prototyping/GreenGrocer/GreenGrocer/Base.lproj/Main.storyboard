@@ -66,7 +66,7 @@
                                 <connections>
                                     <outlet property="nameLabel" destination="Vj9-By-NOt" id="Zhe-P7-tQ1"/>
                                     <outlet property="productImageView" destination="w5P-OF-MDw" id="tTI-KE-tGP"/>
-                                    <segue destination="UuY-KM-3Oq" kind="show" id="wM3-7q-zuo"/>
+                                    <segue destination="UuY-KM-3Oq" kind="show" identifier="DisplayProduct" id="wM3-7q-zuo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
