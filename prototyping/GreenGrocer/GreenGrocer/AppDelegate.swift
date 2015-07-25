@@ -25,9 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var dso = window?.rootViewController as? DataStoreOwner
     dso?.dataStore = dataStore
     
+    // Style the app
+    applyAppAppearance()
+    
     // Perform the Core Spotlight indexing
     dataStore?.indexAllShoppingLists()
-    
+
     return true
   }
 }

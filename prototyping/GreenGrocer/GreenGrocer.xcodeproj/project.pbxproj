@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22003DE31B63720C006E67C9 /* RestorableActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22003DE21B63720C006E67C9 /* RestorableActivity.swift */; };
+		2201AD251B63C3F90055A910 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2201AD241B63C3F90055A910 /* AppAppearance.swift */; };
 		225D29F41B63962A001BC684 /* SearchableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D29F31B63962A001BC684 /* SearchableExtensions.swift */; };
 		2288EB4D1B61071600D4717D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB4C1B61071600D4717D /* AppDelegate.swift */; };
 		2288EB541B61071600D4717D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2288EB521B61071600D4717D /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		22003DE21B63720C006E67C9 /* RestorableActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestorableActivity.swift; sourceTree = "<group>"; };
+		2201AD241B63C3F90055A910 /* AppAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		225D29F31B63962A001BC684 /* SearchableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchableExtensions.swift; sourceTree = "<group>"; };
 		2288EB491B61071600D4717D /* GreenGrocer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenGrocer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2288EB4C1B61071600D4717D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2201AD231B63C3E90055A910 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2201AD241B63C3F90055A910 /* AppAppearance.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		2288EB401B61071600D4717D = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		2288EB4B1B61071600D4717D /* GreenGrocer */ = {
 			isa = PBXGroup;
 			children = (
+				2201AD231B63C3E90055A910 /* Utilities */,
 				2288EB741B61702C00D4717D /* Views */,
 				2288EB651B611EA500D4717D /* Data Layer */,
 				2288EB601B611BF300D4717D /* Controllers */,
@@ -236,6 +247,7 @@
 				2288EB4D1B61071600D4717D /* AppDelegate.swift in Sources */,
 				2288EB7E1B61887F00D4717D /* MultilineLabelThatWorks.swift in Sources */,
 				2288EB641B611C3200D4717D /* ShoppingListTableViewController.swift in Sources */,
+				2201AD251B63C3F90055A910 /* AppAppearance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
