@@ -66,7 +66,7 @@ func ==(lhs: ShoppingList, rhs: ShoppingList) -> Bool {
 }
 
 private func mapProductIDListToProductList(productIDList: [String]) -> [Product]? {
-  let products = productIDList.map(findProductForIDString).filter{ $0 != nil }.map{ $0! }
+  let products = productIDList.flatMap(findProductForIDString)
   if products.count == productIDList.count {
     return products
   } else {

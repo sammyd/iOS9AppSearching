@@ -20,6 +20,6 @@ protocol Serializable {
 
 extension Serializable {
   static func fromDictArray(array: [[String : AnyObject]]) -> [Self]? {
-    return array.map { Self(dict: $0) }.filter { $0 != nil }.map { $0! }
+    return array.flatMap { Self(dict: $0) }
   }
 }
