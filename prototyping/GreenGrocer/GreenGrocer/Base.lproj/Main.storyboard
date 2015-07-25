@@ -358,7 +358,7 @@
                                     <outlet property="dateLabel" destination="Nxl-FI-k6O" id="4k3-hl-TfR"/>
                                     <outlet property="itemCountLabel" destination="KnJ-b0-P1y" id="jIJ-Af-Wud"/>
                                     <outlet property="nameLabel" destination="fFq-2W-7PL" id="FPD-Du-QHo"/>
-                                    <segue destination="Gs9-sf-GlN" kind="show" id="NEU-3o-RAY"/>
+                                    <segue destination="Gs9-sf-GlN" kind="show" identifier="DisplayShoppingList" id="NEU-3o-RAY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
