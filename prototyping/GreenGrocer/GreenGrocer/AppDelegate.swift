@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     dso?.dataStore = dataStore
     
     // Perform the Core Spotlight indexing
-    dataStore?.indexShoppingLists()
+    dataStore?.indexAllShoppingLists()
     
     return true
   }

@@ -50,7 +50,11 @@ extension ShoppingList {
 }
 
 extension DataStore {
-  func indexShoppingLists() {
+  func indexAllShoppingLists() {
+    indexShoppingLists(shoppingLists)
+  }
+  
+  func indexShoppingLists(shoppingLists: [ShoppingList]) {
     let shoppingListItems = shoppingLists.map { $0.searchableItem }
     CSSearchableIndex.defaultSearchableIndex().indexSearchableItems(shoppingListItems) {
       error in
@@ -60,6 +64,7 @@ extension DataStore {
         print("Indexing shopping lists successful")
       }
     }
+
   }
   
   func removeShoppingListIndex() {
