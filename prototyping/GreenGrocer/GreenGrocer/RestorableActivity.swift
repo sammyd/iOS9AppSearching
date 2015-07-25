@@ -12,6 +12,10 @@ protocol RestorableActivity {
   var restorableActivities : Set<String> { get }
 }
 
+protocol RestorableActivityContainer : RestorableActivity {
+  func primaryRestorableResponderForActivityType(activityType: String) -> UIResponder?
+}
+
 
 extension RestorableActivity where Self : UIViewController {
   var restorableActivities : Set<String> {
@@ -25,3 +29,19 @@ extension RestorableActivity where Self : UIViewController {
   }
 }
 
+extension RestorableActivityContainer where Self : UIViewController {
+  func primaryRestorableResponderForActivityType(activityType: String) -> UIResponder? {
+    let compatibleVCs = childViewControllers.reverse().filter {
+      vc in
+      guard let vc = vc as? RestorableActivity else {
+        return false
+      }
+      return vc.restorableActivities.contains(activityType)
+    }
+    if let vcToSelect = compatibleVCs.first {
+      return vcToSelect
+    } else {
+      return nil
+    }
+  }
+}

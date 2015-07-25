@@ -16,16 +16,9 @@ class TabBarViewController: UITabBarController, DataStoreOwner {
   }
 }
 
-extension TabBarViewController : RestorableActivity {
+extension TabBarViewController : RestorableActivityContainer {
   override func restoreUserActivityState(activity: NSUserActivity) {
-    let compatibleVCs = viewControllers?.filter {
-      vc in
-      guard let vc = vc as? RestorableActivity else {
-        return false
-      }
-      return vc.restorableActivities.contains(activity.activityType)
-    }
-    if let vcToSelect = compatibleVCs?.first {
+    if let vcToSelect = primaryRestorableResponderForActivityType(activity.activityType) as? UIViewController {
       selectedViewController = vcToSelect
       vcToSelect.restoreUserActivityState(activity)
     }
