@@ -44,7 +44,7 @@ class ProductViewController: UIViewController {
 extension ProductViewController {
   override func updateUserActivityState(activity: NSUserActivity) {
     if let product = product {
-      activity.contentAttributeSet = searchAttributeSetForProduct(product)
+      activity.contentAttributeSet = product.searchableAttributeSet
       activity.title = product.name
       activity.addUserInfoEntriesFromDictionary(["id" : product.id.UUIDString])
       activity.keywords = Set([product.name, "fruit"])
@@ -57,18 +57,6 @@ extension ProductViewController {
     activity.eligibleForPublicIndexing = true
     activity.eligibleForSearch = true
     return activity
-  }
-  
-  private func searchAttributeSetForProduct(product: Product) -> CSSearchableItemAttributeSet {
-    let attributeSet = CSSearchableItemAttributeSet()
-    attributeSet.contentDescription = product.details
-    attributeSet.title = product.name
-    attributeSet.displayName = product.name
-    attributeSet.keywords = [product.name, "fruit", "shopping", "greengrocer"]
-    if let thumbnail = UIImage(named: "\(product.photoName)_thumb") {
-      attributeSet.thumbnailData = UIImageJPEGRepresentation(thumbnail, 0.7)
-    }
-    return attributeSet
   }
 }
 

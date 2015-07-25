@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22003DE31B63720C006E67C9 /* RestorableActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22003DE21B63720C006E67C9 /* RestorableActivity.swift */; };
+		225D29F41B63962A001BC684 /* SearchableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D29F31B63962A001BC684 /* SearchableExtensions.swift */; };
 		2288EB4D1B61071600D4717D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB4C1B61071600D4717D /* AppDelegate.swift */; };
 		2288EB541B61071600D4717D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2288EB521B61071600D4717D /* Main.storyboard */; };
 		2288EB561B61071600D4717D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2288EB551B61071600D4717D /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		22003DE21B63720C006E67C9 /* RestorableActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestorableActivity.swift; sourceTree = "<group>"; };
+		225D29F31B63962A001BC684 /* SearchableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchableExtensions.swift; sourceTree = "<group>"; };
 		2288EB491B61071600D4717D /* GreenGrocer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenGrocer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2288EB4C1B61071600D4717D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2288EB531B61071600D4717D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				2288EB681B6120AD00D4717D /* ShoppingList.swift */,
 				2288EB6A1B612C2400D4717D /* DataStore.swift */,
 				2288EB6E1B614F0E00D4717D /* GreenGrocerSeed.plist */,
+				225D29F31B63962A001BC684 /* SearchableExtensions.swift */,
 			);
 			name = "Data Layer";
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				2288EB7A1B617FF000D4717D /* NavigationViewController.swift in Sources */,
 				2288EB821B62260E00D4717D /* ShoppingListViewController.swift in Sources */,
 				2288EB731B61585200D4717D /* DataStoreUtils.swift in Sources */,
+				225D29F41B63962A001BC684 /* SearchableExtensions.swift in Sources */,
 				2288EB801B62186D00D4717D /* ShoppingListTableViewCell.swift in Sources */,
 				2288EB6D1B61383C00D4717D /* DataModel.swift in Sources */,
 				2288EB621B611C1700D4717D /* ProductTableViewController.swift in Sources */,

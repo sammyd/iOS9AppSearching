@@ -9,6 +9,7 @@
 import UIKit
 
 let productActivityName = "com.razeware.GreenGrocer.product"
+let shoppingListDomainID = "com.razeware.GreenGrocer.shoppingList"
 
 
 @UIApplicationMain
@@ -23,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var dso = window?.rootViewController as? DataStoreOwner
     dso?.dataStore = dataStore
+    
+    // Perform the Core Spotlight indexing
+    dataStore?.indexShoppingLists()
     
     return true
   }
