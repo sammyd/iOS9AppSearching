@@ -44,7 +44,7 @@
                                         <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Pd-KT-sl0">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="163.5"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pears_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="w5P-OF-MDw">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pears_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="w5P-OF-MDw">
                                                     <rect key="frame" x="0.0" y="32" width="100" height="100"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="ProductName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-By-NOt">
@@ -237,7 +237,7 @@
                                                             <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ht5-7s-uzt">
                                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="141.5"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pears_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Oa3-94-OCB">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pears_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Oa3-94-OCB">
                                                                         <rect key="frame" x="0.0" y="21" width="100" height="100"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="ProductName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1g-Mx-IVc">
@@ -532,7 +532,7 @@
         <scene sceneID="SQL-uI-sdc">
             <objects>
                 <navigationController id="ULH-uX-xxT" customClass="NavigationViewController" customModule="GreenGrocer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shopping Lists" image="second" id="H52-tB-Aso"/>
+                    <tabBarItem key="tabBarItem" title="Shopping Lists" image="basket-green" selectedImage="basket-white" id="H52-tB-Aso"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IIj-2U-vvF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -549,7 +549,7 @@
         <scene sceneID="SCW-ta-Va0">
             <objects>
                 <navigationController id="x4h-nZ-vHz" customClass="NavigationViewController" customModule="GreenGrocer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Products" image="first" id="egI-pS-ugL"/>
+                    <tabBarItem key="tabBarItem" title="Products" image="fruitbowl-green" selectedImage="fruitbowl-white" id="egI-pS-ugL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pOa-Fj-t4O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -564,10 +564,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="basket-green" width="32" height="32"/>
+        <image name="basket-white" width="32" height="32"/>
         <image name="fruit" width="1520" height="836"/>
+        <image name="fruitbowl-green" width="32" height="32"/>
+        <image name="fruitbowl-white" width="32" height="32"/>
         <image name="pears" width="640" height="426"/>
         <image name="pears_thumb" width="100" height="100"/>
-        <image name="second" width="30" height="30"/>
     </resources>
 </document>

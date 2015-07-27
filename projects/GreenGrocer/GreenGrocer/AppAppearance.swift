@@ -36,6 +36,7 @@ extension UIColor {
 func applyAppAppearance() {
   styleNavBar()
   styleTabBar()
+  styleTabBarItem()
   styleTintColor()
 }
 
@@ -59,4 +60,10 @@ private func styleTabBar() {
 private func styleTintColor() {
   let appearanceProxy = UIView.appearance()
   appearanceProxy.tintColor = UIColor.ggGreen
+}
+
+private func styleTabBarItem() {
+  let appearanceProxy = UITabBarItem.appearance()
+  appearanceProxy.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.whiteColor()], forState: .Selected)
+  appearanceProxy.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.ggGreen], forState: .Normal)
 }
