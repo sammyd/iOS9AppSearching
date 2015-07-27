@@ -67,32 +67,3 @@ class ProductTableViewController: UITableViewController, DataStoreOwner {
   }
   
 }
-
-
-extension ProductTableViewController : RestorableActivity {
-  override func restoreUserActivityState(activity: NSUserActivity) {
-    switch activity.activityType {
-    case productActivityName:
-      if let id = activity.userInfo?["id"] as? String {
-        displayVCForProductWithId(id)
-      }
-    default:
-      break
-    }
-    
-    super.restoreUserActivityState(activity)
-  }
-  
-  var restorableActivities : Set<String> {
-    return Set([productActivityName])
-  }
-  
-  private func displayVCForProductWithId(id: String) {
-    guard let id = NSUUID(UUIDString: id),
-      let productIndex = dataStore?.products.indexOf({ $0.id.isEqual(id) }) else {
-        return
-    }
-    tableView.selectRowAtIndexPath(NSIndexPath(forRow: productIndex, inSection: 0), animated: false, scrollPosition: .Middle)
-    performSegueWithIdentifier("DisplayProduct", sender: self)
-  }
-}
