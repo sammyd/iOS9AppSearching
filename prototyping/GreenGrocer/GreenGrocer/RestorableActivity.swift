@@ -16,8 +16,7 @@ protocol RestorableActivityContainer : RestorableActivity {
   func primaryRestorableResponderForActivityType(activityType: String) -> UIResponder?
 }
 
-
-extension RestorableActivity where Self : UIViewController {
+extension RestorableActivityContainer where Self : UIViewController {
   var restorableActivities : Set<String> {
     var activities = Set<String>()
     for vc in childViewControllers {
@@ -27,9 +26,7 @@ extension RestorableActivity where Self : UIViewController {
     }
     return activities
   }
-}
-
-extension RestorableActivityContainer where Self : UIViewController {
+  
   func primaryRestorableResponderForActivityType(activityType: String) -> UIResponder? {
     let compatibleVCs = childViewControllers.reverse().filter {
       vc in
@@ -38,10 +35,6 @@ extension RestorableActivityContainer where Self : UIViewController {
       }
       return vc.restorableActivities.contains(activityType)
     }
-    if let vcToSelect = compatibleVCs.first {
-      return vcToSelect
-    } else {
-      return nil
-    }
+    return compatibleVCs.first
   }
 }

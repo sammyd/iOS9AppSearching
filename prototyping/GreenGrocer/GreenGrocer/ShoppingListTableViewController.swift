@@ -78,7 +78,6 @@ extension ShoppingListTableViewController {
 }
 
 
-
 extension ShoppingListTableViewController : RestorableActivity {
   override func restoreUserActivityState(activity: NSUserActivity) {
     switch activity.activityType {
