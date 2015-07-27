@@ -22,9 +22,6 @@
 
 import UIKit
 
-let productActivityName = "com.razeware.GreenGrocer.product"
-let shoppingListDomainID = "com.razeware.GreenGrocer.shoppingList"
-
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
