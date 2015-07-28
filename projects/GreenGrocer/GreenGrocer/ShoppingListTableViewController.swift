@@ -97,7 +97,7 @@ extension ShoppingListTableViewController {
 
 extension ShoppingListTableViewController : RestorableActivity {
   var restorableActivities : Set<String> {
-    return Set([CSSearchableItemActionType])
+    return Set([CSSearchableItemActionType, shoppingListsActivityName])
   }
   
   override func restoreUserActivityState(activity: NSUserActivity) {
@@ -106,6 +106,8 @@ extension ShoppingListTableViewController : RestorableActivity {
       if let id = activity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
         displayVCForShoppingListWithId(id)
       }
+    case shoppingListsActivityName:
+      break
     default:
       break
     }
