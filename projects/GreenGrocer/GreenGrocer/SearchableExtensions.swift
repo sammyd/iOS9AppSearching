@@ -79,5 +79,18 @@ extension DataStore {
       }
     }
   }
+  
+  func removeShoppingListsFromIndex(shoppingLists: [ShoppingList]) {
+    let idsToDelete = shoppingLists.map { $0.id.UUIDString }
+    
+    CSSearchableIndex.defaultSearchableIndex().deleteSearchableItemsWithIdentifiers(idsToDelete) {
+      error in
+      if let error = error {
+        print("Error deleting shopping lists: \(error.localizedDescription)")
+      } else {
+        print("Successfully deleted shopping lists")
+      }
+    }
+  }
 }
 
