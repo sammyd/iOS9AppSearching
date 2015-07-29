@@ -23,6 +23,8 @@
 import UIKit
 import CoreSpotlight
 
+let productActivityName = "com.razeware.GreenGrocer.product"
+
 class ProductViewController: UIViewController {
   
   @IBOutlet weak var productImageView: UIImageView!
@@ -33,12 +35,14 @@ class ProductViewController: UIViewController {
   var product : Product? {
     didSet {
       updateViewForProduct()
+      userActivity?.needsSave = true
     }
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
+    userActivity = prepareUserActivity()
     updateViewForProduct()
   }
 
@@ -51,4 +55,25 @@ class ProductViewController: UIViewController {
     }
   }
 }
+
+
+extension ProductViewController {
+  override func updateUserActivityState(activity: NSUserActivity) {
+    if let product = product {
+      activity.contentAttributeSet = product.searchableAttributeSet
+      activity.title = product.name
+      activity.addUserInfoEntriesFromDictionary(["id" : product.id.UUIDString])
+      activity.keywords = Set([product.name, "fruit"])
+    }
+  }
+  
+  private func prepareUserActivity() -> NSUserActivity {
+    let activity = NSUserActivity(activityType: productActivityName)
+    activity.eligibleForHandoff = true
+    activity.eligibleForPublicIndexing = true
+    activity.eligibleForSearch = true
+    return activity
+  }
+}
+
 
