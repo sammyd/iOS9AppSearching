@@ -37,3 +37,47 @@ extension Product {
     return attributeSet
   }
 }
+
+private var dateFormatter : NSDateFormatter = {
+  let df = NSDateFormatter()
+  df.dateStyle = .ShortStyle
+  return df
+  }()
+
+extension ShoppingList {
+  var searchableAttributeSet : CSSearchableItemAttributeSet {
+    let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeContent as String)
+    attributeSet.contentDescription = "A shopping list created for \(dateFormatter.stringFromDate(date))"
+    attributeSet.contentCreationDate = date
+    attributeSet.displayName = name
+    attributeSet.keywords = products.map { $0.name } + ["shopping list", "greengrocer"]
+    if let thumbnail = UIImage(named: "fruit_basket") {
+      attributeSet.thumbnailData = UIImageJPEGRepresentation(thumbnail, 0.7)
+    }
+    return attributeSet
+  }
+  
+  var searchableItem : CSSearchableItem {
+    let item = CSSearchableItem(uniqueIdentifier: id.UUIDString, domainIdentifier: shoppingListDomainID, attributeSet: searchableAttributeSet)
+    return item
+  }
+}
+
+extension DataStore {
+  func indexAllShoppingLists() {
+    indexShoppingLists(shoppingLists)
+  }
+  
+  func indexShoppingLists(shoppingLists: [ShoppingList]) {
+    let shoppingListItems = shoppingLists.map { $0.searchableItem }
+    CSSearchableIndex.defaultSearchableIndex().indexSearchableItems(shoppingListItems) {
+      error in
+      if let error = error {
+        print("Error indexing shopping lists: \(error.localizedDescription)")
+      } else {
+        print("Indexing shopping lists successful")
+      }
+    }
+  }
+}
+

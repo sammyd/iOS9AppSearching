@@ -23,6 +23,9 @@
 import UIKit
 import CoreSpotlight
 
+let shoppingListDomainID = "com.razeware.GreenGrocer.shoppingList"
+
+
 class ShoppingListTableViewController: UITableViewController, DataStoreOwner {
   
   var dataStore : DataStore?

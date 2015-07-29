@@ -39,6 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Style the app
     applyAppAppearance()
     
+    // Perform the Core Spotlight indexing
+    dataStore?.indexAllShoppingLists()
+    
 
     return true
   }
