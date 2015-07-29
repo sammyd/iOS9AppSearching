@@ -31,3 +31,13 @@ class NavigationViewController: UINavigationController, DataStoreOwner {
   }
 }
 
+extension NavigationViewController : RestorableActivityContainer {
+  override func restoreUserActivityState(activity: NSUserActivity) {
+    if let vcToSelect = primaryRestorableResponderForActivityType(activity.activityType) as? UIViewController {
+      popToViewController(vcToSelect, animated: false)
+      vcToSelect.restoreUserActivityState(activity)
+    }
+    
+    super.restoreUserActivityState(activity)
+  }
+}

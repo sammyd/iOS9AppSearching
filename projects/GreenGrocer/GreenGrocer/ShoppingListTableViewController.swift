@@ -94,3 +94,31 @@ extension ShoppingListTableViewController {
   }
 }
 
+
+extension ShoppingListTableViewController : RestorableActivity {
+  var restorableActivities : Set<String> {
+    return Set([CSSearchableItemActionType])
+  }
+  
+  override func restoreUserActivityState(activity: NSUserActivity) {
+    switch activity.activityType {
+    case CSSearchableItemActionType:
+      if let id = activity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
+        displayVCForShoppingListWithId(id)
+      }
+    default:
+      break
+    }
+    
+    super.restoreUserActivityState(activity)
+  }
+  
+  private func displayVCForShoppingListWithId(id: String) {
+    guard let id = NSUUID(UUIDString: id),
+      let shoppingListIndex = dataStore?.shoppingLists.indexOf({ $0.id.isEqual(id) }) else {
+        return
+    }
+    tableView.selectRowAtIndexPath(NSIndexPath(forRow: shoppingListIndex, inSection: 0), animated: false, scrollPosition: .Middle)
+    performSegueWithIdentifier("DisplayShoppingList", sender: self)
+  }
+}

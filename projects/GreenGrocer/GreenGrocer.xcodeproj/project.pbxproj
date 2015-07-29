@@ -30,6 +30,7 @@
 		2288EB821B62260E00D4717D /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2288EB811B62260E00D4717D /* ShoppingListViewController.swift */; };
 		22E70AB11B68C88300526CD1 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E70AB01B68C88300526CD1 /* StoreViewController.swift */; };
 		22E70AAA1B66E65400526CD1 /* SearchableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E70AA91B66E65400526CD1 /* SearchableExtensions.swift */; };
+		22E70AAD1B682D3300526CD1 /* RestorableActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E70AAC1B682D3300526CD1 /* RestorableActivity.swift */; };
 		22F2E3C31B623DE500E7753F /* CreateShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2E3C21B623DE500E7753F /* CreateShoppingListViewController.swift */; };
 		22F2E3C51B6246BA00E7753F /* SelectableProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F2E3C41B6246BA00E7753F /* SelectableProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		2288EB811B62260E00D4717D /* ShoppingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		22E70AB01B68C88300526CD1 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		22E70AA91B66E65400526CD1 /* SearchableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchableExtensions.swift; sourceTree = "<group>"; };
+		22E70AAC1B682D3300526CD1 /* RestorableActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestorableActivity.swift; sourceTree = "<group>"; };
 		22F2E3C21B623DE500E7753F /* CreateShoppingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateShoppingListViewController.swift; sourceTree = "<group>"; };
 		22F2E3C41B6246BA00E7753F /* SelectableProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				2201AD241B63C3F90055A910 /* AppAppearance.swift */,
+				22E70AAC1B682D3300526CD1 /* RestorableActivity.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				2288EB671B611FEF00D4717D /* Product.swift in Sources */,
 				2288EB691B6120AD00D4717D /* ShoppingList.swift in Sources */,
 				2288EB761B61704A00D4717D /* ProductTableViewCell.swift in Sources */,
+				22E70AAD1B682D3300526CD1 /* RestorableActivity.swift in Sources */,
 				2288EB4D1B61071600D4717D /* AppDelegate.swift in Sources */,
 				2288EB7E1B61887F00D4717D /* MultilineLabelThatWorks.swift in Sources */,
 				2288EB641B611C3200D4717D /* ShoppingListTableViewController.swift in Sources */,
