@@ -19,6 +19,7 @@
                     <connections>
                         <segue destination="x4h-nZ-vHz" kind="relationship" relationship="viewControllers" id="fhq-ZL-ftb"/>
                         <segue destination="ULH-uX-xxT" kind="relationship" relationship="viewControllers" id="HEA-68-IKe"/>
+                        <segue destination="EVi-dB-1h4" kind="relationship" relationship="viewControllers" id="HbP-vo-Lty"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -47,7 +48,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pears_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="w5P-OF-MDw">
                                                     <rect key="frame" x="0.0" y="32" width="100" height="100"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="ProductName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-By-NOt">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" fixedFrame="YES" text="ProductName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-By-NOt">
                                                     <rect key="frame" x="110" y="64" width="457" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -240,7 +241,7 @@
                                                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pears_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Oa3-94-OCB">
                                                                         <rect key="frame" x="0.0" y="21" width="100" height="100"/>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" text="ProductName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1g-Mx-IVc">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" fixedFrame="YES" text="ProductName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1g-Mx-IVc">
                                                                         <rect key="frame" x="110" y="53" width="490" height="36"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -526,7 +527,104 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Idm-i1-FYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ffV-Wb-EqO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1355" y="1037"/>
+            <point key="canvasLocation" x="2078" y="1141"/>
+        </scene>
+        <!--Store-->
+        <scene sceneID="5ax-Fi-mfh">
+            <objects>
+                <navigationController id="EVi-dB-1h4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Store" image="store-green" selectedImage="store-white" id="b5H-P0-seL"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PIU-wZ-BlU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OlM-sm-PsC" kind="relationship" relationship="rootViewController" id="ABh-S8-vDd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9J8-Kx-KFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="1141"/>
+        </scene>
+        <!--Store-->
+        <scene sceneID="nwN-Jn-LFm">
+            <objects>
+                <viewController id="OlM-sm-PsC" customClass="StoreViewController" customModule="GreenGrocer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6fu-aK-RuF"/>
+                        <viewControllerLayoutGuide type="bottom" id="DVp-jR-5dT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e5a-iL-iyg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fruit" translatesAutoresizingMaskIntoConstraints="NO" id="5xs-mD-UMa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBy-PC-zMb">
+                                <rect key="frame" x="20" y="84" width="560" height="447"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="d1b-fK-09k">
+                                    <rect key="frame" x="0.0" y="0.0" width="560" height="447"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="bSq-vR-4hm">
+                                            <rect key="frame" x="8" y="8" width="540" height="429"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ray's Fruit Emporium" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zpY-cK-NK6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="36"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="☏ (202) 555 0198 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfK-xd-iHO">
+                                                    <rect key="frame" x="0.0" y="54" width="540" height="32.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="27"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIU-Bn-ZAY">
+                                                    <rect key="frame" x="0.0" y="97.5" width="540" height="55"/>
+                                                    <string key="text">2627 Mulberry Street 
+Lexington, NC 27292</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" fixedFrame="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHu-18-2KJ">
+                                                    <rect key="frame" x="0.0" y="163.5" width="540" height="265.5"/>
+                                                </mapView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bSq-vR-4hm" firstAttribute="top" secondItem="d1b-fK-09k" secondAttribute="topMargin" id="BaM-Gc-ySz"/>
+                                        <constraint firstAttribute="bottom" secondItem="bSq-vR-4hm" secondAttribute="bottom" constant="10" id="Jdg-Bf-dW5"/>
+                                        <constraint firstItem="bSq-vR-4hm" firstAttribute="leading" secondItem="d1b-fK-09k" secondAttribute="leadingMargin" id="joD-91-CHV"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5xs-mD-UMa" secondAttribute="trailing" id="45P-Ax-Hra"/>
+                            <constraint firstAttribute="bottom" secondItem="5xs-mD-UMa" secondAttribute="bottom" id="CUE-mE-it5"/>
+                            <constraint firstItem="uBy-PC-zMb" firstAttribute="top" secondItem="6fu-aK-RuF" secondAttribute="bottom" constant="20" id="Ggf-M7-JnX"/>
+                            <constraint firstItem="DVp-jR-5dT" firstAttribute="top" secondItem="uBy-PC-zMb" secondAttribute="bottom" constant="20" id="NHK-yp-EW8"/>
+                            <constraint firstItem="uBy-PC-zMb" firstAttribute="leading" secondItem="e5a-iL-iyg" secondAttribute="leadingMargin" id="UVd-Jr-an9"/>
+                            <constraint firstItem="5xs-mD-UMa" firstAttribute="top" secondItem="e5a-iL-iyg" secondAttribute="top" id="ciA-ID-9Au"/>
+                            <constraint firstItem="5xs-mD-UMa" firstAttribute="leading" secondItem="e5a-iL-iyg" secondAttribute="leading" id="ko1-cJ-Xb9"/>
+                            <constraint firstItem="uBy-PC-zMb" firstAttribute="trailing" secondItem="e5a-iL-iyg" secondAttribute="trailingMargin" id="w3O-yy-f00"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Store" id="bfZ-zz-glu"/>
+                    <connections>
+                        <outlet property="mapView" destination="iHu-18-2KJ" id="TZ5-MJ-L2n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P3a-oN-XFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1355" y="1141"/>
         </scene>
         <!--Shopping Lists-->
         <scene sceneID="SQL-uI-sdc">
@@ -571,5 +669,7 @@
         <image name="fruitbowl-white" width="32" height="32"/>
         <image name="pears" width="640" height="426"/>
         <image name="pears_thumb" width="100" height="100"/>
+        <image name="store-green" width="32" height="32"/>
+        <image name="store-white" width="32" height="32"/>
     </resources>
 </document>
